@@ -1,29 +1,62 @@
 // comece a criar a sua função add na linha abaixo
+function add(a, b) {
+    return a + b;
+}
 
 
 // descomente a linha seguinte para testar sua função
-// console.assert(add(3, 5) === 8, 'A função add não está funcionando como esperado');
+console.log(add(2,6));
 
 
 // comece a criar a sua função multiply na linha abaixo
-
+function multiply(c, d) {
+    let resultadoMultiplicacao = 0;
+    for (let i = 1; i <= d; i++) {
+        resultadoMultiplicacao = add(resultadoMultiplicacao, c);
+    }
+    return resultadoMultiplicacao;
+}
 
 // descomente a linha seguinte para testar sua função
-// console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
+console.log(multiply(4,6));
 
 
 // comece a criar a sua função power na linha abaixo
+function power(x, n) {
+    let resultadoPower= 0;
+    for(let i = 1; i<n; i++){
+        if(i == 1){
+        resultadoPower= multiply(x,x);
+        }
+        else{
+            resultadoPower = multiply(resultadoPower,x);
+        }
 
+    }
+    return resultadoPower;
+}
 
 // descomente a linha seguinte para testar sua função
-// console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
+console.log(power(2,8));
 
 
 // comece a criar a sua função factorial na linha abaixo
+function factorial(y){
+    resultadoFactorial = 0;
+    for (let i = 1; i<y; i++){
+        if(i == 1){
+        resultadoFactorial = multiply(i,(i+1));
+        }
+        else{
+            resultadoFactorial = multiply(resultadoFactorial,(i+1));
+        }
+    }
+    return resultadoFactorial;
+}
 
 
 // descomente a linha seguinte para testar sua função
-// console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
+console.log(factorial(5));
 
 
 /**
